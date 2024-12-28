@@ -29,6 +29,7 @@ const user = require("./routes/user.js")
 
 
 
+
 //const MONGO_URL = "mongodb://127.0.0.1:27017/wonderlust";
 const dbUrl = process.env.ATLASDB_URL;
 
@@ -124,6 +125,7 @@ app.use((err,req,res,next)=>{
   //  res.status(statusCode).send(message);
   res.status(statusCode).render("error.ejs",{err})
 });
+
 
 
 app.listen(8080,()=>{
